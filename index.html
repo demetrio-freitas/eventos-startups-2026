@@ -2625,6 +2625,141 @@
   .reco-result { margin-top:16px; padding:16px; background:#131f36; border:1px solid #1e2d4a; border-radius:12px; color:#cbd5e1; font-size:13px; line-height:1.7; white-space:pre-wrap; }
   .reco-close { position:absolute; top:16px; right:16px; background:none; border:none; color:#64748b; font-size:20px; cursor:pointer; }
   .reco-modal-wrap { position:relative; }
+
+  /* ========== FEATURE 1: DARK MODE ========== */
+  body, .event-card, .card-header, .card-desc, .card-costs, .card-reg, .roi-bar, .card-tips,
+  .filters-bar, .sel-banner, header, .tab-nav, .hero, .stat-chip, .cost-item, .total-cost,
+  .filter-btn, .chat-panel, .news-wrap, .news-card, .comp-table, .cluster-wrap {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  body.dark-mode { background: #0D0E1A !important; color: #e2e8f0 !important; }
+  body.dark-mode header { background: #0D0E1A !important; border-color: #2a2b3d !important; }
+  body.dark-mode .tab-nav { background: #0D0E1A !important; border-color: #2a2b3d !important; }
+  body.dark-mode .filters-bar { background: #12132a !important; border-color: #2a2b3d !important; }
+  body.dark-mode .event-card { background: #1a1b2e !important; border-color: #2a2b3d !important; }
+  body.dark-mode .card-costs { background: #12132a !important; }
+  body.dark-mode .cost-item { border-color: #2a2b3d !important; }
+  body.dark-mode .total-cost { background: #0D0E1A !important; border-color: #2a2b3d !important; }
+  body.dark-mode .hero { background: #12132a !important; }
+  body.dark-mode .stat-chip { background: #1a1b2e !important; border-color: #2a2b3d !important; }
+  body.dark-mode .sel-banner { background: #1a1b2e !important; border-color: #2a2b3d !important; }
+  body.dark-mode .filter-btn { background: #1a1b2e !important; border-color: #2a2b3d !important; color: #94a3b8 !important; }
+  body.dark-mode .filter-btn.active { background: #2952E3 !important; color: #fff !important; }
+  body.dark-mode .card-desc { color: #cbd5e1 !important; }
+  body.dark-mode .roi-bar { background: #12132a !important; border-color: #2a2b3d !important; }
+  body.dark-mode .card-tips { border-color: #2a2b3d !important; }
+  body.dark-mode .tip-item { color: #94a3b8 !important; }
+  body.dark-mode .chat-panel { background: #1a1b2e !important; border-color: #2a2b3d !important; }
+  body.dark-mode .news-wrap { background: #0D0E1A !important; }
+  body.dark-mode .news-card { background: #1a1b2e !important; border-color: #2a2b3d !important; }
+
+  .dark-toggle { background: none; border: 1px solid #2a3a70; color: #94a3b8; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 16px; transition: all 0.3s; margin-left: 12px; }
+  .dark-toggle:hover { border-color: #4f8ef7; color: #7aa0f0; }
+
+  /* ========== FEATURE 2: COUNTDOWN PULSE ========== */
+  @keyframes pulse-countdown {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.85; }
+  }
+  .days-badge.urgent { background: #fee2e2 !important; color: #991b1b !important; animation: pulse-countdown 1.2s ease-in-out infinite; }
+  .days-badge.happening { background: #d1fae5 !important; color: #065f46 !important; font-weight: 700; }
+  .days-badge.ended { background: #374151 !important; color: #9ca3af !important; opacity: 0.7; }
+
+  /* ========== FEATURE 3: SEARCH ========== */
+  .search-wrap { display: flex; align-items: center; gap: 6px; margin-right: 12px; position: relative; }
+  .search-input { background: #131f36; border: 1px solid #1e2d4a; color: #e2e8f0; padding: 6px 32px 6px 12px; border-radius: 8px; font-size: 13px; width: 220px; outline: none; font-family: inherit; transition: all 0.2s; }
+  .search-input:focus { border-color: #4f8ef7; box-shadow: 0 0 0 2px rgba(79,142,247,0.15); }
+  .search-input::placeholder { color: #475569; }
+  .search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #64748b; cursor: pointer; font-size: 14px; display: none; padding: 0; }
+  .search-clear:hover { color: #e2e8f0; }
+  .search-icon { color: #475569; font-size: 14px; }
+  mark { background: #fde68a; color: #1a1b2e; padding: 1px 2px; border-radius: 2px; }
+  .event-card.search-hidden { display: none !important; }
+
+  /* ========== FEATURE 4: FLIGHT LINKS ========== */
+  .flight-links { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+  .flight-link { background: #131f36; border: 1px solid #1e2d4a; color: #7aa0f0; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 4px; }
+  .flight-link:hover { background: #1a2a50; border-color: #4f8ef7; color: #a8c4ff; }
+
+  /* ========== FEATURE 5: PROFILE MODAL & MATCH SCORE ========== */
+  .profile-btn { background: none; border: 1px solid #2a3a70; color: #94a3b8; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; transition: all 0.2s; margin-left: 8px; white-space: nowrap; }
+  .profile-btn:hover { border-color: #4f8ef7; color: #7aa0f0; }
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+  .modal-box { background: #0f1729; border: 1px solid #1e2d4a; border-radius: 16px; padding: 28px; max-width: 560px; width: 90vw; max-height: 85vh; overflow-y: auto; color: #e2e8f0; position: relative; }
+  .modal-box h2 { margin: 0 0 20px; font-size: 18px; color: #fff; }
+  .modal-box label { display: block; font-size: 13px; font-weight: 600; color: #94a3b8; margin: 14px 0 6px; }
+  .modal-box select, .modal-box input[type="date"] { width: 100%; background: #131f36; border: 1px solid #1e2d4a; color: #e2e8f0; padding: 8px 12px; border-radius: 8px; font-size: 13px; font-family: inherit; }
+  .modal-box .check-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .modal-box .check-item { display: flex; align-items: center; gap: 4px; background: #131f36; border: 1px solid #1e2d4a; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #cbd5e1; cursor: pointer; transition: all 0.2s; }
+  .modal-box .check-item:has(input:checked) { border-color: #4f8ef7; background: #1a2a50; color: #7aa0f0; }
+  .modal-box .check-item input { display: none; }
+  .modal-close { position: absolute; top: 14px; right: 14px; background: none; border: none; color: #64748b; font-size: 22px; cursor: pointer; }
+  .modal-close:hover { color: #e2e8f0; }
+  .modal-save-btn { background: linear-gradient(135deg, #4f8ef7, #8B5CF6); color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; margin-top: 18px; }
+  .match-badge { display: inline-flex; align-items: center; gap: 3px; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; margin-left: 6px; }
+  .match-high { background: #065f46; color: #6ee7b7; }
+  .match-mid { background: #854d0e; color: #fde68a; }
+  .match-low { background: #374151; color: #9ca3af; }
+  .sort-match-btn { background: #131f36; border: 1px solid #1e2d4a; color: #7aa0f0; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; margin-left: 8px; }
+  .sort-match-btn:hover { background: #1a2a50; border-color: #4f8ef7; }
+  .sort-match-btn.active { background: #2952E3; color: #fff; border-color: #2952E3; }
+
+  /* ========== FEATURE 6: NOTES ========== */
+  .note-btn { background: none; border: none; cursor: pointer; font-size: 16px; padding: 2px 4px; opacity: 0.6; transition: all 0.2s; }
+  .note-btn:hover { opacity: 1; }
+  .note-btn.has-note { opacity: 1; }
+  .note-area { display: none; padding: 10px 16px 14px; border-top: 1px solid #1e2d4a; }
+  .note-area.open { display: block; }
+  .note-textarea { width: 100%; min-height: 60px; background: #131f36; border: 1px solid #1e2d4a; color: #e2e8f0; padding: 8px; border-radius: 8px; font-size: 12px; font-family: inherit; resize: vertical; outline: none; }
+  .note-textarea:focus { border-color: #4f8ef7; }
+  .note-indicator { font-size: 10px; color: #7aa0f0; margin-left: 4px; }
+
+  /* ========== FEATURE 7: REMINDERS ========== */
+  .reminder-btn { background: none; border: 1px solid #1e2d4a; color: #94a3b8; padding: 4px 8px; border-radius: 6px; font-size: 11px; cursor: pointer; transition: all 0.2s; }
+  .reminder-btn:hover { border-color: #4f8ef7; color: #7aa0f0; }
+  .reminder-btn.has-reminder { border-color: #f59e0b; color: #f59e0b; }
+  .reminder-popover { position: absolute; bottom: 100%; right: 0; background: #0f1729; border: 1px solid #1e2d4a; border-radius: 12px; padding: 12px; width: 240px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.5); display: none; }
+  .reminder-popover.open { display: block; }
+  .reminder-opt { display: block; width: 100%; background: #131f36; border: 1px solid #1e2d4a; color: #cbd5e1; padding: 8px 10px; border-radius: 6px; font-size: 12px; cursor: pointer; margin-bottom: 6px; text-align: left; transition: all 0.2s; }
+  .reminder-opt:hover { border-color: #4f8ef7; color: #7aa0f0; }
+  .reminder-opt:last-child { margin-bottom: 0; }
+  .reminder-banner { background: linear-gradient(135deg, #451a03, #78350f); border: 1px solid #92400e; border-radius: 12px; padding: 12px 20px; margin: 8px 20px; color: #fde68a; font-size: 13px; display: none; cursor: pointer; transition: all 0.2s; }
+  .reminder-banner:hover { background: linear-gradient(135deg, #78350f, #92400e); }
+  .reminder-banner.show { display: block; }
+  .reminder-list { margin-top: 8px; font-size: 12px; color: #fcd34d; }
+  .reminder-list-item { padding: 4px 0; border-bottom: 1px solid rgba(251,191,36,0.15); }
+
+  /* ========== FEATURE 8: PITCH DECK MODAL ========== */
+  .pitch-btn { background: #131f36; border: 1px solid #1e2d4a; color: #c084fc; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .pitch-btn:hover { background: #1a2a50; border-color: #8B5CF6; }
+  .pitch-content { white-space: pre-wrap; font-size: 13px; line-height: 1.7; color: #cbd5e1; max-height: 60vh; overflow-y: auto; }
+  .pitch-copy-btn { background: #131f36; border: 1px solid #1e2d4a; color: #7aa0f0; padding: 6px 16px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; margin-top: 12px; transition: all 0.2s; }
+  .pitch-copy-btn:hover { background: #1a2a50; }
+
+  /* ========== FEATURE 9: ROI ANALYSIS MODAL ========== */
+  .roi-analysis-btn { background: #1a2a50; border: 1px solid #2a3a70; color: #7aa0f0; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; margin-left: 8px; transition: all 0.2s; }
+  .roi-analysis-btn:hover { background: #2a3a70; color: #a8c4ff; }
+  .fullscreen-modal { position: fixed; inset: 0; background: #0a0f1e; z-index: 10001; overflow-y: auto; padding: 40px; }
+  .fullscreen-modal-close { position: fixed; top: 20px; right: 24px; background: #131f36; border: 1px solid #1e2d4a; color: #e2e8f0; padding: 8px 16px; border-radius: 8px; font-size: 14px; cursor: pointer; z-index: 10002; }
+  .fullscreen-modal-close:hover { background: #1a2a50; }
+  .roi-result-content { max-width: 800px; margin: 0 auto; color: #cbd5e1; font-size: 14px; line-height: 1.8; white-space: pre-wrap; }
+  .roi-export-btn { background: linear-gradient(135deg, #4f8ef7, #8B5CF6); color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 20px; }
+
+  /* ========== FEATURE 10: NEWS PER EVENT ========== */
+  .event-news-btn { background: #131f36; border: 1px solid #1e2d4a; color: #7aa0f0; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .event-news-btn:hover { background: #1a2a50; border-color: #4f8ef7; }
+  .news-slide-panel { position: fixed; top: 0; right: -420px; width: 400px; height: 100vh; background: #0f1729; border-left: 1px solid #1e2d4a; z-index: 10000; transition: right 0.3s; overflow-y: auto; padding: 24px; box-shadow: -8px 0 32px rgba(0,0,0,0.5); }
+  .news-slide-panel.open { right: 0; }
+  .news-slide-close { background: none; border: none; color: #64748b; font-size: 22px; cursor: pointer; position: absolute; top: 12px; right: 12px; }
+  .news-slide-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 16px; padding-right: 30px; }
+  .news-slide-content { font-size: 13px; line-height: 1.7; color: #cbd5e1; white-space: pre-wrap; }
+  .news-update-all-btn { background: linear-gradient(135deg, #4f8ef7, #8B5CF6); color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; margin-left: 12px; }
+
+  @media print {
+    .fullscreen-modal { position: static; padding: 20px; }
+    .fullscreen-modal-close, .roi-export-btn { display: none; }
+    .roi-result-content { color: #000; }
+  }
 </style>
 </head>
 <body>
@@ -2637,8 +2772,13 @@
     <div class="origin-badge">
       📍 Saindo de <strong>Fortaleza, CE</strong>
     </div>
+    <button class="profile-btn" onclick="openProfileModal()">🎯 Meu Perfil</button>
+    <button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()">🌙</button>
   </div>
 </header>
+
+<!-- REMINDER BANNER -->
+<div class="reminder-banner" id="reminderBanner" onclick="showReminderDetails()"></div>
 
 <!-- TAB NAVIGATION -->
 <nav class="tab-nav">
@@ -2693,6 +2833,11 @@
 
 <div class="filters-bar">
   <div class="filters-inner">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Buscar evento..." oninput="debounceSearch()">
+      <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
+    </div>
     <span class="filter-label">PRIORIDADE:</span>
     <button class="filter-btn active" data-filter="all" onclick="filterEvents('all',this)">Todos (69)</button>
     <button class="filter-btn" data-filter="p1" onclick="filterEvents('p1',this)"><span class="priority-dot" style="background:#1a9e6d"></span>Essencial (2)</button>
@@ -2709,6 +2854,8 @@
     <button class="filter-btn" data-filter="nam" onclick="filterEvents('nam',this)">🌎 Américas (EUA/CA)</button>
     <button class="filter-btn" data-filter="latam" onclick="filterEvents('latam',this)">🌎 América Latina</button>
     <button class="filter-btn" data-filter="mena" onclick="filterEvents('mena',this)">🌍 MENA/Ásia</button>
+    <span class="filter-sep"></span>
+    <button class="sort-match-btn" id="sortMatchBtn" onclick="toggleSortByMatch()" style="display:none;">🎯 Ordenar por Match</button>
   </div>
 </div>
 
@@ -2719,6 +2866,7 @@
     <span class="sel-banner-text" id="selBannerText">0 eventos selecionados</span>
     <span class="sel-banner-budget" id="selBannerBudget"></span>
     <button class="sel-banner-ics" onclick="exportSelecaoIcs()">📅 Exportar Seleção</button>
+    <button class="roi-analysis-btn" onclick="openRoiAnalysis()">📊 Análise de ROI</button>
     <button class="sel-banner-clear" onclick="clearSelecao()">✕ Limpar seleção</button>
   </div>
 </div>
@@ -2955,6 +3103,7 @@
         <p>Clique em qualquer evento para gerar um briefing estratégico via IA — datas, speakers confirmados, o que esperar e links para acompanhar em tempo real.</p>
         <p class="news-welcome-sub">Selecione um evento abaixo ou clique em "Gerar Feed Completo" para carregar todos de uma vez.</p>
         <button class="news-gen-all-btn" onclick="generateAllNews()">⚡ Gerar Feed Completo</button>
+        <button class="news-update-all-btn" onclick="updateAllSelectedNews()" style="margin-top:8px;">📰 Atualizar Notícias (Seleção)</button>
       </div>
       <div id="newsCardsGrid" class="news-cards-grid"></div>
     </div>
@@ -8117,6 +8266,940 @@ updateSelBanner = function() {
 };
 // Re-trigger to set initial badge
 updateSelBanner();
+
+// ======================== FEATURE 1: DARK MODE ========================
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  const isDark = body.classList.contains('dark-mode');
+  localStorage.setItem('dark_mode', isDark ? '1' : '0');
+  document.getElementById('darkToggle').textContent = isDark ? '☀️' : '🌙';
+}
+(function initDarkMode() {
+  if (localStorage.getItem('dark_mode') === '1') {
+    document.body.classList.add('dark-mode');
+    const btn = document.getElementById('darkToggle');
+    if (btn) btn.textContent = '☀️';
+  }
+})();
+
+// ======================== FEATURE 2: COUNTDOWN (already in buildCards, enhanced via patch) ========================
+// Patching getDaysUntil to support ranges and better countdown labels
+(function patchCountdown() {
+  const origBuildCards = buildCards;
+  buildCards = function() {
+    origBuildCards();
+    // Post-process: update days-badge with enhanced countdown
+    document.querySelectorAll('.event-card').forEach(card => {
+      const id = parseInt(card.id.replace('event-card-',''));
+      const ev = events.find(e => e.id === id);
+      if (!ev) return;
+      const badge = card.querySelector('.days-badge');
+      if (!badge) return;
+      const days = getDaysUntil(ev);
+      // Also compute duration
+      const endDays = getDaysUntilEnd(ev);
+      let text, cls;
+      if (endDays < 0) { text = 'encerrado'; cls = 'ended'; }
+      else if (days <= 0 && endDays >= 0) { text = 'acontecendo!'; cls = 'happening'; }
+      else if (days <= 7) { text = `em ${days} dias!`; cls = 'urgent'; }
+      else if (days <= 30) { text = `em ${days} dias`; cls = 'soon'; }
+      else { text = `em ${days} dias`; cls = 'next'; }
+      badge.textContent = text;
+      badge.className = 'days-badge ' + cls;
+    });
+  };
+})();
+
+function getDaysUntilEnd(ev) {
+  const now = new Date();
+  now.setHours(0,0,0,0);
+  const dateStr = ev.date;
+  // Try to parse end date from range like "28–30 Jan 2026" or "8–11 Jun 2026"
+  const rangeMatch = dateStr.match(/(\d+)[–-](\d+)\s+(\w+)\s+(\d{4})/);
+  const monthMap = {Jan:0,Fev:1,Mar:2,Abr:3,Mai:4,Jun:5,Jul:6,Ago:7,Set:8,Out:9,Nov:10,Dez:11};
+  if (rangeMatch) {
+    const d = parseInt(rangeMatch[2]);
+    const m = monthMap[rangeMatch[3]] ?? 0;
+    const y = parseInt(rangeMatch[4]);
+    const target = new Date(y, m, d);
+    return Math.round((target - now) / (1000*60*60*24));
+  }
+  // Fallback: same as start date
+  return getDaysUntil(ev);
+}
+
+// ======================== FEATURE 3: FULL-TEXT SEARCH ========================
+let searchTimeout = null;
+function debounceSearch() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(executeSearch, 200);
+  const val = document.getElementById('searchInput').value;
+  document.getElementById('searchClear').style.display = val ? 'block' : 'none';
+}
+
+function executeSearch() {
+  const query = document.getElementById('searchInput').value.trim().toLowerCase();
+  // Remove old highlights
+  document.querySelectorAll('.event-card mark').forEach(m => {
+    const parent = m.parentNode;
+    parent.replaceChild(document.createTextNode(m.textContent), m);
+    parent.normalize();
+  });
+
+  if (!query) {
+    document.querySelectorAll('.event-card').forEach(c => c.classList.remove('search-hidden'));
+    applyFilters();
+    return;
+  }
+
+  document.querySelectorAll('.event-card').forEach(card => {
+    const id = parseInt(card.id.replace('event-card-',''));
+    const ev = events.find(e => e.id === id);
+    if (!ev) return;
+    // Also search notes
+    const notes = localStorage.getItem(`event_notes_${id}`) || '';
+    const searchFields = [ev.name, ev.location, ev.focus, ev.desc, ev.country, notes].join(' ').toLowerCase();
+    if (searchFields.includes(query)) {
+      card.classList.remove('search-hidden');
+      // Highlight text in card
+      highlightInCard(card, query);
+    } else {
+      card.classList.add('search-hidden');
+    }
+  });
+}
+
+function highlightInCard(card, query) {
+  const targets = card.querySelectorAll('.card-name, .card-location, .card-date, .card-desc, .tip-item span');
+  targets.forEach(el => {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(node => {
+      const idx = node.textContent.toLowerCase().indexOf(query);
+      if (idx === -1) return;
+      const before = node.textContent.substring(0, idx);
+      const match = node.textContent.substring(idx, idx + query.length);
+      const after = node.textContent.substring(idx + query.length);
+      const mark = document.createElement('mark');
+      mark.textContent = match;
+      const frag = document.createDocumentFragment();
+      if (before) frag.appendChild(document.createTextNode(before));
+      frag.appendChild(mark);
+      if (after) frag.appendChild(document.createTextNode(after));
+      node.parentNode.replaceChild(frag, node);
+    });
+  });
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('searchClear').style.display = 'none';
+  document.querySelectorAll('.event-card mark').forEach(m => {
+    const parent = m.parentNode;
+    parent.replaceChild(document.createTextNode(m.textContent), m);
+    parent.normalize();
+  });
+  document.querySelectorAll('.event-card').forEach(c => c.classList.remove('search-hidden'));
+  applyFilters();
+}
+
+// Patch applyFilters to respect search-hidden
+const _origApplyFilters = applyFilters;
+applyFilters = function() {
+  _origApplyFilters();
+  // Re-hide search-hidden cards
+  if (document.getElementById('searchInput').value.trim()) {
+    executeSearch();
+  }
+};
+
+// ======================== FEATURE 4: FLIGHT LINKS ========================
+const airportMap = {
+  // Brazilian cities
+  'Rio de Janeiro': 'GIG', 'Riocentro': 'GIG', 'São Paulo': 'GRU', 'Brasília': 'BSB',
+  'Belo Horizonte': 'CNF', 'Salvador': 'SSA', 'Florianópolis': 'FLN', 'Porto Alegre': 'POA',
+  'Gramado': 'POA', 'Fortaleza': 'FOR', 'Recife': 'REC', 'Curitiba': 'CWB',
+  // Europe
+  'Barcelona': 'BCN', 'Lisboa': 'LIS', 'Londres': 'LHR', 'Paris': 'CDG', 'Berlim': 'BER',
+  'Munique': 'MUC', 'Viena': 'VIE', 'Helsinque': 'HEL', 'Tartu': 'TLL', 'Tallinn': 'TLL',
+  'Bucareste': 'OTP', 'Madrid': 'MAD', 'Malta': 'MLA', 'Valletta': 'MLA',
+  'Amsterdam': 'AMS', 'Varsóvia': 'WAW', 'Hannover': 'HAJ', 'Dublin': 'DUB',
+  'Copenhagen': 'CPH', 'Estocolmo': 'ARN', 'Salamanca': 'MAD', 'Dresden': 'DRS',
+  'St. Gallen': 'ZRH', 'Gdańsk': 'GDN',
+  // USA
+  'San Francisco': 'SFO', 'Las Vegas': 'LAS', 'Austin': 'AUS', 'Miami': 'MIA',
+  'Miami Beach': 'MIA', 'Nova York': 'JFK', 'Washington': 'IAD', 'Long Beach': 'LGB',
+  'Mountain View': 'SJC', 'San Jose': 'SJC', 'San Mateo': 'SFO', 'Redwood City': 'SFO',
+  'Denver': 'DEN', 'New York': 'JFK',
+  // Canada
+  'Vancouver': 'YVR', 'Toronto': 'YYZ', 'Montreal': 'YUL',
+  // Latin America
+  'Monterrey': 'MTY', 'Guadalajara': 'GDL', 'Cidade do México': 'MEX', 'México': 'MEX',
+  'Bogotá': 'BOG', 'Medellín': 'MDE', 'Santiago': 'SCL', 'Buenos Aires': 'EZE',
+  'Lima': 'LIM',
+  // Middle East / Asia
+  'Dubai': 'DXB', 'Doha': 'DOH', 'Riyadh': 'RUH', 'Tel Aviv': 'TLV',
+  'Seul': 'ICN', 'Tóquio': 'NRT', 'Singapura': 'SIN', 'Hong Kong': 'HKG',
+  'Bengaluru': 'BLR', 'Mumbai': 'BOM', 'Bangkok': 'BKK', 'Taipei': 'TPE',
+};
+
+function getAirportCode(location) {
+  for (const [city, code] of Object.entries(airportMap)) {
+    if (location.includes(city)) return code;
+  }
+  return null;
+}
+
+function openFlightSearch(evId, provider) {
+  const ev = events.find(e => e.id === evId);
+  if (!ev) return;
+  const destCode = getAirportCode(ev.location);
+  const dateMatch = ev.date.match(/(\d+)[–-]?\d*\s+(\w+)\s+(\d{4})/);
+  const monthMap = {Jan:'01',Fev:'02',Mar:'03',Abr:'04',Mai:'05',Jun:'06',Jul:'07',Ago:'08',Set:'09',Out:'10',Nov:'11',Dez:'12'};
+  let dateParam = '';
+  if (dateMatch) {
+    const day = dateMatch[1].padStart(2,'0');
+    const mon = monthMap[dateMatch[2]] || '01';
+    const year = dateMatch[3];
+    dateParam = `${year}-${mon}-${day}`;
+  }
+
+  let url;
+  if (provider === 'skyscanner') {
+    if (destCode && dateParam) {
+      url = `https://www.skyscanner.com.br/transport/flights/for/${destCode.toLowerCase()}/${dateParam.replace(/-/g,'')}/?adultsv2=1`;
+    } else {
+      url = `https://www.skyscanner.com.br/transport/flights/for/?query=${encodeURIComponent(ev.location)}`;
+    }
+  } else {
+    // Google Flights
+    if (destCode) {
+      url = `https://www.google.com/travel/flights?q=Flights+to+${destCode}+from+FOR+on+${dateParam}`;
+    } else {
+      url = `https://www.google.com/travel/flights?q=Flights+to+${encodeURIComponent(ev.location)}+from+Fortaleza`;
+    }
+  }
+  window.open(url, '_blank');
+}
+
+// ======================== FEATURE 5: PROFILE & MATCH SCORE ========================
+const sectorKeywords = {
+  'SaaS': ['saas','b2b','cloud','software','plataforma','platform','subscription'],
+  'Fintech': ['fintech','banking','pagamento','financial','payment','insurtech','neobank','finance','open banking'],
+  'Hardware/Robótica': ['hardware','robótica','robotics','iot','device','sensor','manufacturing','eletrônica'],
+  'IA/ML': ['ia','ai','ml','machine learning','inteligência artificial','artificial intelligence','deep learning','gpt','llm','genai','generative'],
+  'Web3/Crypto': ['web3','crypto','blockchain','defi','nft','dao','token','descentralizado','bitcoin','ethereum'],
+  'E-commerce': ['e-commerce','ecommerce','marketplace','d2c','retail','varejo','commerce','loja'],
+  'Deep Tech': ['deep tech','deeptech','quantum','biotech','nanotech','ciência','science','research','frontier'],
+  'Climate Tech': ['climate','sustentabilidade','sustainability','clean','energy','energia','green','carbon','esg'],
+};
+
+const objectiveAlignment = {
+  'Captar investimento': ['investor','investidor','vc','venture','pitch','funding','capital','seed','series','demo day'],
+  'Networking': ['networking','connect','community','ecosystem','ecossistema','meet','hub'],
+  'Lançar produto': ['launch','product','demo','showcase','expo','exhibition','feira'],
+  'Aprender': ['workshop','conference','summit','talks','keynote','learn','education','painel'],
+  'Expandir mercado': ['international','global','expansion','market','mercado','cross-border','export'],
+  'Recrutar': ['talent','recruit','hiring','jobs','career','team','rh'],
+};
+
+function openProfileModal() {
+  const existing = document.getElementById('profileModal');
+  if (existing) existing.remove();
+
+  const profile = JSON.parse(localStorage.getItem('user_profile') || '{}');
+
+  const modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.id = 'profileModal';
+  modal.innerHTML = `
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeProfileModal()">✕</button>
+      <h2>🎯 Meu Perfil de Startup</h2>
+      <label>Setor principal</label>
+      <select id="profileSetor">
+        ${['SaaS','Fintech','Hardware/Robótica','IA/ML','Web3/Crypto','E-commerce','Deep Tech','Climate Tech','Outro'].map(s =>
+          `<option value="${s}" ${profile.setor===s?'selected':''}>${s}</option>`).join('')}
+      </select>
+      <label>Estágio</label>
+      <select id="profileStage">
+        ${['Pre-seed','Seed','Series A','Series B+','Bootstrapped'].map(s =>
+          `<option value="${s}" ${profile.stage===s?'selected':''}>${s}</option>`).join('')}
+      </select>
+      <label>Objetivos</label>
+      <div class="check-grid">
+        ${['Captar investimento','Networking','Lançar produto','Aprender','Expandir mercado','Recrutar'].map(o =>
+          `<label class="check-item"><input type="checkbox" name="profileObj" value="${o}" ${(profile.objectives||[]).includes(o)?'checked':''}>${o}</label>`).join('')}
+      </div>
+      <label>Regiões de interesse</label>
+      <div class="check-grid">
+        ${['Brasil','Europa','EUA','Ásia','LATAM','MENA'].map(r =>
+          `<label class="check-item"><input type="checkbox" name="profileReg" value="${r}" ${(profile.regions||[]).includes(r)?'checked':''}>${r}</label>`).join('')}
+      </div>
+      <button class="modal-save-btn" onclick="saveProfile()">Salvar Perfil</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+function closeProfileModal() {
+  const m = document.getElementById('profileModal');
+  if (m) m.remove();
+}
+
+function saveProfile() {
+  const profile = {
+    setor: document.getElementById('profileSetor').value,
+    stage: document.getElementById('profileStage').value,
+    objectives: [...document.querySelectorAll('input[name="profileObj"]:checked')].map(i => i.value),
+    regions: [...document.querySelectorAll('input[name="profileReg"]:checked')].map(i => i.value),
+  };
+  localStorage.setItem('user_profile', JSON.stringify(profile));
+  closeProfileModal();
+  updateMatchScores();
+  // Show sort button
+  document.getElementById('sortMatchBtn').style.display = 'inline-flex';
+}
+
+function calcMatchScore(ev) {
+  const profile = JSON.parse(localStorage.getItem('user_profile') || '{}');
+  if (!profile.setor) return -1;
+
+  let score = 0;
+  // Sector match (40%)
+  const keywords = sectorKeywords[profile.setor] || [];
+  const evText = (ev.focus + ' ' + ev.desc + ' ' + ev.name).toLowerCase();
+  const sectorHits = keywords.filter(k => evText.includes(k)).length;
+  score += Math.min(sectorHits / Math.max(keywords.length * 0.3, 1), 1) * 40;
+
+  // Region match (20%)
+  const regionMap = {'Brasil':['br'],'Europa':['eur'],'EUA':['nam'],'Ásia':['asia'],'LATAM':['latam'],'MENA':['mena']};
+  const userRegions = (profile.regions || []).flatMap(r => regionMap[r] || []);
+  if (userRegions.includes(ev.country)) score += 20;
+
+  // Objective alignment (20%)
+  const objectives = profile.objectives || [];
+  let objScore = 0;
+  objectives.forEach(obj => {
+    const objKeys = objectiveAlignment[obj] || [];
+    if (objKeys.some(k => evText.includes(k))) objScore++;
+  });
+  score += objectives.length > 0 ? (objScore / objectives.length) * 20 : 0;
+
+  // ROI score (20%)
+  score += (ev.roi / 5) * 20;
+
+  return Math.round(score);
+}
+
+function updateMatchScores() {
+  const profile = JSON.parse(localStorage.getItem('user_profile') || '{}');
+  if (!profile.setor) return;
+
+  document.querySelectorAll('.event-card').forEach(card => {
+    const id = parseInt(card.id.replace('event-card-',''));
+    const ev = events.find(e => e.id === id);
+    if (!ev) return;
+
+    // Remove old match badge
+    card.querySelectorAll('.match-badge').forEach(b => b.remove());
+
+    const score = calcMatchScore(ev);
+    if (score < 0) return;
+
+    const cls = score >= 80 ? 'match-high' : score >= 50 ? 'match-mid' : 'match-low';
+    const badge = document.createElement('span');
+    badge.className = `match-badge ${cls}`;
+    badge.textContent = `${score}%`;
+    const priorityDiv = card.querySelector('.card-priority');
+    if (priorityDiv) priorityDiv.appendChild(badge);
+  });
+}
+
+let sortByMatch = false;
+function toggleSortByMatch() {
+  sortByMatch = !sortByMatch;
+  const btn = document.getElementById('sortMatchBtn');
+  btn.classList.toggle('active', sortByMatch);
+
+  const grid = document.getElementById('eventsGrid');
+  const cards = [...grid.children];
+
+  if (sortByMatch) {
+    cards.sort((a, b) => {
+      const idA = parseInt(a.id.replace('event-card-',''));
+      const idB = parseInt(b.id.replace('event-card-',''));
+      const evA = events.find(e => e.id === idA);
+      const evB = events.find(e => e.id === idB);
+      return calcMatchScore(evB) - calcMatchScore(evA);
+    });
+  } else {
+    cards.sort((a, b) => {
+      const idA = parseInt(a.id.replace('event-card-',''));
+      const idB = parseInt(b.id.replace('event-card-',''));
+      const evA = events.find(e => e.id === idA);
+      const evB = events.find(e => e.id === idB);
+      return (evA.month - evB.month) || (evA.id - evB.id);
+    });
+  }
+  cards.forEach(c => grid.appendChild(c));
+}
+
+// Init match scores on load if profile exists
+(function() {
+  const p = localStorage.getItem('user_profile');
+  if (p) {
+    setTimeout(() => {
+      updateMatchScores();
+      document.getElementById('sortMatchBtn').style.display = 'inline-flex';
+    }, 500);
+  }
+})();
+
+// ======================== FEATURE 6: PERSONAL NOTES ========================
+// Injected into card rendering via post-processing
+(function injectNotes() {
+  setTimeout(() => {
+    document.querySelectorAll('.event-card').forEach(card => {
+      const id = parseInt(card.id.replace('event-card-',''));
+      const hasNote = !!localStorage.getItem(`event_notes_${id}`);
+
+      // Add note button to card-header
+      const header = card.querySelector('.card-header');
+      if (header && !header.querySelector('.note-btn')) {
+        const btn = document.createElement('button');
+        btn.className = `note-btn${hasNote ? ' has-note' : ''}`;
+        btn.textContent = '📝';
+        btn.title = 'Notas pessoais';
+        btn.onclick = () => toggleNoteArea(id, card);
+        header.style.position = 'relative';
+        btn.style.position = 'absolute';
+        btn.style.top = '10px';
+        btn.style.right = '10px';
+        header.appendChild(btn);
+      }
+
+      // Add note area
+      if (!card.querySelector('.note-area')) {
+        const area = document.createElement('div');
+        area.className = 'note-area';
+        area.id = `noteArea-${id}`;
+        area.innerHTML = `<textarea class="note-textarea" placeholder="Suas anotações sobre este evento..." oninput="saveNote(${id}, this)">${localStorage.getItem(`event_notes_${id}`) || ''}</textarea>`;
+        card.appendChild(area);
+      }
+    });
+  }, 600);
+})();
+
+function toggleNoteArea(id, card) {
+  const area = card.querySelector('.note-area');
+  if (area) area.classList.toggle('open');
+}
+
+function saveNote(id, textarea) {
+  const val = textarea.value.trim();
+  if (val) {
+    localStorage.setItem(`event_notes_${id}`, val);
+  } else {
+    localStorage.removeItem(`event_notes_${id}`);
+  }
+  // Update note button appearance
+  const card = document.getElementById(`event-card-${id}`);
+  if (card) {
+    const btn = card.querySelector('.note-btn');
+    if (btn) btn.classList.toggle('has-note', !!val);
+  }
+}
+
+// ======================== FEATURE 7: REMINDERS ========================
+function getReminders() {
+  return JSON.parse(localStorage.getItem('event_reminders') || '[]');
+}
+
+function saveReminders(reminders) {
+  localStorage.setItem('event_reminders', JSON.stringify(reminders));
+}
+
+function toggleReminderPopover(evId, btn) {
+  // Close all other popovers
+  document.querySelectorAll('.reminder-popover.open').forEach(p => p.classList.remove('open'));
+  const popover = btn.parentElement.querySelector('.reminder-popover');
+  if (popover) popover.classList.toggle('open');
+}
+
+function addReminder(evId, type) {
+  const ev = events.find(e => e.id === evId);
+  if (!ev) return;
+
+  const reminders = getReminders();
+  // Parse event date
+  const dateMatch = ev.date.match(/(\d+)[–-]?\d*\s+(\w+)\s+(\d{4})/);
+  const monthMap = {Jan:0,Fev:1,Mar:2,Abr:3,Mai:4,Jun:5,Jul:6,Ago:7,Set:8,Out:9,Nov:10,Dez:11};
+  if (!dateMatch) return;
+
+  const eventDate = new Date(parseInt(dateMatch[3]), monthMap[dateMatch[2]] || 0, parseInt(dateMatch[1]));
+  let reminderDate;
+
+  if (type === '30d') reminderDate = new Date(eventDate.getTime() - 30*24*60*60*1000);
+  else if (type === '7d') reminderDate = new Date(eventDate.getTime() - 7*24*60*60*1000);
+  else if (type === '1d') reminderDate = new Date(eventDate.getTime() - 1*24*60*60*1000);
+  else return;
+
+  // Remove existing same reminder
+  const filtered = reminders.filter(r => !(r.evId === evId && r.type === type));
+  filtered.push({
+    evId,
+    type,
+    eventName: ev.name,
+    reminderDate: reminderDate.toISOString().split('T')[0],
+    eventDate: eventDate.toISOString().split('T')[0]
+  });
+  saveReminders(filtered);
+
+  // Close popover
+  document.querySelectorAll('.reminder-popover.open').forEach(p => p.classList.remove('open'));
+
+  // Update button state
+  updateReminderButtons();
+  checkReminders();
+
+  // Try to get notification permission
+  if ('Notification' in window && Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+}
+
+function addCustomReminder(evId) {
+  const input = document.getElementById(`customReminderDate-${evId}`);
+  if (!input || !input.value) return;
+
+  const ev = events.find(e => e.id === evId);
+  if (!ev) return;
+
+  const reminders = getReminders();
+  reminders.push({
+    evId,
+    type: 'custom',
+    eventName: ev.name,
+    reminderDate: input.value,
+    eventDate: input.value
+  });
+  saveReminders(reminders);
+  document.querySelectorAll('.reminder-popover.open').forEach(p => p.classList.remove('open'));
+  updateReminderButtons();
+  checkReminders();
+}
+
+function updateReminderButtons() {
+  const reminders = getReminders();
+  const evIds = new Set(reminders.map(r => r.evId));
+  document.querySelectorAll('.reminder-btn').forEach(btn => {
+    const id = parseInt(btn.dataset.evId);
+    btn.classList.toggle('has-reminder', evIds.has(id));
+  });
+}
+
+function checkReminders() {
+  const reminders = getReminders();
+  const today = new Date().toISOString().split('T')[0];
+  const due = reminders.filter(r => r.reminderDate <= today);
+
+  const banner = document.getElementById('reminderBanner');
+  if (due.length > 0) {
+    banner.classList.add('show');
+    banner.innerHTML = `⏰ ${due.length} lembrete${due.length>1?'s':''} pendente${due.length>1?'s':''}
+      <div class="reminder-list">${due.map(r => `<div class="reminder-list-item">${r.eventName} — ${r.type === '30d' ? '30 dias antes' : r.type === '7d' ? '7 dias antes' : r.type === '1d' ? '1 dia antes' : r.reminderDate}</div>`).join('')}</div>`;
+
+    // Browser notification
+    if ('Notification' in window && Notification.permission === 'granted') {
+      due.forEach(r => {
+        const notifKey = `notif_shown_${r.evId}_${r.type}_${r.reminderDate}`;
+        if (!sessionStorage.getItem(notifKey)) {
+          new Notification('Lembrete de Evento', { body: `${r.eventName} - ${r.type === '30d' ? '30 dias antes' : r.type === '7d' ? '7 dias antes' : '1 dia antes'}`, icon: '🚀' });
+          sessionStorage.setItem(notifKey, '1');
+        }
+      });
+    }
+  } else {
+    banner.classList.remove('show');
+  }
+}
+
+function showReminderDetails() {
+  const reminders = getReminders();
+  const today = new Date().toISOString().split('T')[0];
+  const due = reminders.filter(r => r.reminderDate <= today);
+  if (!due.length) return;
+  alert(due.map(r => `${r.eventName}: ${r.type} (lembrete: ${r.reminderDate})`).join('\n'));
+}
+
+// Init reminders
+setTimeout(() => {
+  checkReminders();
+  if ('Notification' in window && Notification.permission === 'default') {
+    // Will request on first reminder add
+  }
+}, 800);
+
+// ======================== FEATURE 4, 6, 7, 10: INJECT BUTTONS INTO CARDS ========================
+(function injectCardButtons() {
+  setTimeout(() => {
+    document.querySelectorAll('.event-card').forEach(card => {
+      const id = parseInt(card.id.replace('event-card-',''));
+      const regRow = card.querySelector('.card-reg-row');
+      if (!regRow || regRow.querySelector('.flight-link')) return;
+
+      // Feature 4: Flight links
+      const flightDiv = document.createElement('div');
+      flightDiv.className = 'flight-links';
+      flightDiv.innerHTML = `
+        <a class="flight-link" onclick="openFlightSearch(${id},'google')">✈️ Google Flights</a>
+        <a class="flight-link" onclick="openFlightSearch(${id},'skyscanner')">✈️ Skyscanner</a>
+      `;
+      regRow.appendChild(flightDiv);
+
+      // Feature 7: Reminder button
+      const reminderWrap = document.createElement('div');
+      reminderWrap.style.position = 'relative';
+      reminderWrap.style.display = 'inline-block';
+      const reminders = getReminders();
+      const hasReminder = reminders.some(r => r.evId === id);
+      reminderWrap.innerHTML = `
+        <button class="reminder-btn${hasReminder?' has-reminder':''}" data-ev-id="${id}" onclick="toggleReminderPopover(${id}, this)">⏰ Lembrete</button>
+        <div class="reminder-popover" id="reminderPop-${id}">
+          <button class="reminder-opt" onclick="addReminder(${id},'30d')">30 dias antes</button>
+          <button class="reminder-opt" onclick="addReminder(${id},'7d')">7 dias antes</button>
+          <button class="reminder-opt" onclick="addReminder(${id},'1d')">1 dia antes</button>
+          <input type="date" id="customReminderDate-${id}" class="reminder-opt" style="color:#cbd5e1;background:#131f36;border:1px solid #1e2d4a;">
+          <button class="reminder-opt" onclick="addCustomReminder(${id})">Definir data custom</button>
+        </div>
+      `;
+      regRow.appendChild(reminderWrap);
+
+      // Feature 8: Pitch button
+      const pitchBtn = document.createElement('button');
+      pitchBtn.className = 'pitch-btn';
+      pitchBtn.textContent = '🎤 Preparar Pitch';
+      pitchBtn.onclick = () => generatePitch(id);
+      regRow.appendChild(pitchBtn);
+
+      // Feature 10: News button
+      const newsBtn = document.createElement('button');
+      newsBtn.className = 'event-news-btn';
+      newsBtn.textContent = '📰 Notícias';
+      newsBtn.onclick = () => fetchEventNews(id);
+      regRow.appendChild(newsBtn);
+    });
+  }, 700);
+})();
+
+// ======================== FEATURE 8: PITCH DECK GENERATOR ========================
+function generatePitch(evId) {
+  const ev = events.find(e => e.id === evId);
+  if (!ev) return;
+
+  // Check cache
+  const cached = localStorage.getItem(`pitch_${evId}`);
+  if (cached) {
+    showPitchModal(ev.name, cached);
+    return;
+  }
+
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) {
+    alert('Configure sua chave da API Anthropic primeiro (use o chatbot no canto inferior direito).');
+    return;
+  }
+
+  const profile = JSON.parse(localStorage.getItem('user_profile') || '{}');
+  const profileText = profile.setor ? `\nPerfil da startup: Setor ${profile.setor}, Estágio ${profile.stage}, Objetivos: ${(profile.objectives||[]).join(', ')}, Regiões: ${(profile.regions||[]).join(', ')}` : '';
+
+  const prompt = `Gere um outline de pitch deck personalizado para apresentar no evento "${ev.name}" (${ev.location}, ${ev.date}).
+Foco do evento: ${ev.focus}
+Descrição: ${ev.desc}
+${profileText}
+
+Inclua:
+1. Slide-by-slide outline (título + pontos principais de cada slide)
+2. Talking points para o tipo de audiência deste evento
+3. Perguntas prováveis dos investidores/jurados
+4. Formato recomendado (duração, estilo)
+5. Dicas específicas para este evento
+
+Responda em português (pt-BR), de forma prática e direta.`;
+
+  showPitchModal(ev.name, 'Gerando pitch outline...');
+
+  fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 2000,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    const text = data.content?.[0]?.text || 'Erro ao gerar pitch.';
+    localStorage.setItem(`pitch_${evId}`, text);
+    showPitchModal(ev.name, text);
+  })
+  .catch(err => {
+    showPitchModal(ev.name, 'Erro: ' + err.message);
+  });
+}
+
+function showPitchModal(eventName, content) {
+  let modal = document.getElementById('pitchModal');
+  if (modal) modal.remove();
+
+  modal = document.createElement('div');
+  modal.className = 'modal-overlay';
+  modal.id = 'pitchModal';
+  modal.innerHTML = `
+    <div class="modal-box" style="max-width:700px;">
+      <button class="modal-close" onclick="document.getElementById('pitchModal').remove()">✕</button>
+      <h2>🎤 Pitch Outline — ${eventName}</h2>
+      <div class="pitch-content">${content}</div>
+      <button class="pitch-copy-btn" onclick="copyPitch()">📋 Copiar</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+function copyPitch() {
+  const content = document.querySelector('.pitch-content');
+  if (content) {
+    navigator.clipboard.writeText(content.textContent);
+    const btn = document.querySelector('.pitch-copy-btn');
+    btn.textContent = '✅ Copiado!';
+    setTimeout(() => btn.textContent = '📋 Copiar', 2000);
+  }
+}
+
+// ======================== FEATURE 9: ROI ANALYSIS ========================
+function openRoiAnalysis() {
+  if (selectedIds.size === 0) {
+    alert('Selecione pelo menos um evento para analisar.');
+    return;
+  }
+
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) {
+    alert('Configure sua chave da API Anthropic primeiro (use o chatbot no canto inferior direito).');
+    return;
+  }
+
+  const selectedEvs = events.filter(e => selectedIds.has(e.id));
+  const evList = selectedEvs.map(e => `- ${e.name} (${e.location}, ${e.date}) | Custo: ${e.totalBRL} | ROI: ${e.roi}/5 | Foco: ${e.focus}`).join('\n');
+
+  const profile = JSON.parse(localStorage.getItem('user_profile') || '{}');
+  const profileText = profile.setor ? `\nPerfil: ${profile.setor}, ${profile.stage}` : '';
+
+  const prompt = `Analise o ROI dos seguintes eventos selecionados para uma startup de Fortaleza, CE:${profileText}
+
+${evList}
+
+Forneça:
+1. **Análise de Custo Total** — soma dos custos, distribuição por categoria
+2. **Ranking de ROI** — ordene os eventos do melhor ao pior ROI, justificando
+3. **Análise de Sobreposição de Audiência** — quais eventos compartilham público similar
+4. **Recomendação de Corte** — se o orçamento for apertado, quais cortar primeiro (com justificativa)
+5. **Sequência Ótima de Viagem** — ordem cronológica otimizada para minimizar custos de deslocamento
+
+Responda em português (pt-BR), de forma prática com dados concretos.`;
+
+  showRoiModal('Analisando ROI dos eventos selecionados...');
+
+  fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 4000,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    const text = data.content?.[0]?.text || 'Erro ao analisar.';
+    showRoiModal(text);
+  })
+  .catch(err => {
+    showRoiModal('Erro: ' + err.message);
+  });
+}
+
+function showRoiModal(content) {
+  let modal = document.getElementById('roiModal');
+  if (modal) modal.remove();
+
+  modal = document.createElement('div');
+  modal.className = 'fullscreen-modal';
+  modal.id = 'roiModal';
+  modal.innerHTML = `
+    <button class="fullscreen-modal-close" onclick="document.getElementById('roiModal').remove()">✕ Fechar</button>
+    <div class="roi-result-content">${content}</div>
+    <button class="roi-export-btn" onclick="exportRoiPdf()">📄 Exportar PDF</button>
+  `;
+  document.body.appendChild(modal);
+}
+
+function exportRoiPdf() {
+  window.print();
+}
+
+// ======================== FEATURE 10: NEWS PER EVENT ========================
+function fetchEventNews(evId) {
+  const ev = events.find(e => e.id === evId);
+  if (!ev) return;
+
+  // Check cache (24h)
+  const cacheKey = `event_news_${evId}`;
+  const cached = localStorage.getItem(cacheKey);
+  if (cached) {
+    const parsed = JSON.parse(cached);
+    const age = Date.now() - parsed.timestamp;
+    if (age < 24 * 60 * 60 * 1000) {
+      showNewsPanel(ev.name, parsed.content);
+      return;
+    }
+  }
+
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) {
+    alert('Configure sua chave da API Anthropic primeiro.');
+    return;
+  }
+
+  showNewsPanel(ev.name, 'Buscando notícias...');
+
+  const prompt = `Pesquise e resuma as últimas notícias sobre o evento "${ev.name}" (${ev.location}, ${ev.date}) para 2026:
+- Novos speakers confirmados
+- Mudanças de data ou local
+- Promoções de ingresso
+- Temas anunciados
+- Qualquer update relevante
+
+Se não houver informações confirmadas para 2026, resuma o que se sabe da edição anterior e o que se espera.
+Responda em português (pt-BR), de forma concisa e prática.`;
+
+  fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 1500,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    const text = data.content?.[0]?.text || 'Sem notícias disponíveis.';
+    localStorage.setItem(cacheKey, JSON.stringify({ content: text, timestamp: Date.now() }));
+    showNewsPanel(ev.name, text);
+  })
+  .catch(err => {
+    showNewsPanel(ev.name, 'Erro: ' + err.message);
+  });
+}
+
+function showNewsPanel(eventName, content) {
+  let panel = document.getElementById('newsSlidePanel');
+  if (!panel) {
+    panel = document.createElement('div');
+    panel.className = 'news-slide-panel';
+    panel.id = 'newsSlidePanel';
+    document.body.appendChild(panel);
+  }
+
+  panel.innerHTML = `
+    <button class="news-slide-close" onclick="document.getElementById('newsSlidePanel').classList.remove('open')">✕</button>
+    <div class="news-slide-title">📰 ${eventName}</div>
+    <div class="news-slide-content">${content}</div>
+  `;
+  // Force reflow then open
+  panel.offsetHeight;
+  panel.classList.add('open');
+}
+
+async function updateAllSelectedNews() {
+  if (selectedIds.size === 0) {
+    alert('Selecione pelo menos um evento primeiro.');
+    return;
+  }
+
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) {
+    alert('Configure sua chave da API Anthropic primeiro.');
+    return;
+  }
+
+  const selectedEvs = events.filter(e => selectedIds.has(e.id));
+  for (const ev of selectedEvs) {
+    // Clear cache to force refresh
+    localStorage.removeItem(`event_news_${ev.id}`);
+    await fetchEventNewsAsync(ev.id);
+    // Small delay between requests
+    await new Promise(r => setTimeout(r, 1000));
+  }
+  alert(`Notícias atualizadas para ${selectedEvs.length} eventos.`);
+}
+
+async function fetchEventNewsAsync(evId) {
+  const ev = events.find(e => e.id === evId);
+  if (!ev) return;
+
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) return;
+
+  const prompt = `Resuma brevemente as últimas notícias sobre "${ev.name}" (${ev.location}, ${ev.date}) para 2026. Responda em português, 3-5 bullet points.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 800,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.[0]?.text || '';
+    localStorage.setItem(`event_news_${evId}`, JSON.stringify({ content: text, timestamp: Date.now() }));
+  } catch(e) { /* skip */ }
+}
+
+// Close popovers on outside click
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.reminder-popover') && !e.target.closest('.reminder-btn')) {
+    document.querySelectorAll('.reminder-popover.open').forEach(p => p.classList.remove('open'));
+  }
+});
 
 </script>
 </body>
