@@ -2521,6 +2521,110 @@
     color: #a8c4ff;
     border-color: #4f8ef7;
   }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FEATURE 1: COMPARADOR LADO A LADO
+     ═══════════════════════════════════════════════════════════════════════════ */
+  #tabComparador { padding: 24px 16px; }
+  .comp-empty { text-align:center; padding:80px 24px; color:#94a3b8; }
+  .comp-empty-icon { font-size:48px; margin-bottom:16px; }
+  .comp-empty-title { font-size:18px; font-weight:600; color:#e2e8f0; margin-bottom:8px; }
+  .comp-empty-sub { font-size:14px; }
+  .comp-grid { display:grid; gap:16px; padding:0 16px; }
+  .comp-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .comp-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .comp-col { background:#0f1a2e; border:1px solid #1e2d4a; border-radius:12px; overflow:hidden; }
+  .comp-col-header { padding:16px; background:#131f36; border-bottom:1px solid #1e2d4a; text-align:center; }
+  .comp-col-flag { font-size:28px; }
+  .comp-col-name { font-size:16px; font-weight:700; color:#e2e8f0; margin-top:4px; }
+  .comp-col-loc { font-size:12px; color:#94a3b8; margin-top:2px; }
+  .comp-row { display:flex; flex-direction:column; padding:12px 16px; border-bottom:1px solid #1a2540; }
+  .comp-row-label { font-size:11px; font-weight:600; color:#64748b; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+  .comp-row-value { font-size:14px; color:#cbd5e1; }
+  .comp-row-value.cheapest { color:#34d399; font-weight:600; }
+  .comp-row-value.priciest { color:#f87171; font-weight:600; }
+  .comp-stars { color:#fbbf24; }
+  .comp-tips { font-size:12px; color:#94a3b8; line-height:1.5; }
+  .comp-tips div { margin-bottom:4px; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FEATURE 2: SIMULADOR DE ORCAMENTO
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .budget-sim { background:#0f1a2e; border:1px solid #1e2d4a; border-radius:12px; padding:20px 24px; margin:16px 0 24px; }
+  .budget-sim-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px; }
+  .budget-sim-title { font-size:15px; font-weight:700; color:#e2e8f0; }
+  .budget-sim-count { font-size:13px; color:#7aa0f0; font-weight:500; }
+  .budget-slider-wrap { display:flex; align-items:center; gap:12px; }
+  .budget-slider-wrap label { font-size:12px; color:#94a3b8; white-space:nowrap; }
+  .budget-slider { flex:1; -webkit-appearance:none; appearance:none; height:6px; border-radius:3px; background:#1e2d4a; outline:none; }
+  .budget-slider::-webkit-slider-thumb { -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:var(--accent, #4f8ef7); cursor:pointer; border:2px solid #0f1a2e; }
+  .budget-slider-val { font-size:16px; font-weight:700; color:#4f8ef7; min-width:100px; text-align:right; }
+  .budget-actions { display:flex; gap:8px; margin-top:12px; }
+  .budget-combo-btn { background:#1a2a50; border:1px solid #2a3a70; color:#7aa0f0; padding:6px 14px; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer; transition:all .2s; }
+  .budget-combo-btn:hover { background:#2a3a70; color:#a8c4ff; }
+  .budget-combo-result { margin-top:12px; padding:12px; background:#131f36; border-radius:8px; border:1px solid #1e2d4a; font-size:13px; color:#cbd5e1; display:none; }
+  .budget-combo-result.visible { display:block; }
+  .event-card.budget-dimmed { opacity:0.25; pointer-events:none; filter:grayscale(0.5); transition:opacity .3s, filter .3s; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FEATURE 3: EXPORTAR ICS DA SELECAO
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .sel-banner-ics { background:#1a2a50; border:1px solid #2a3a70; color:#7aa0f0; padding:4px 12px; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer; margin-left:8px; transition:all .2s; }
+  .sel-banner-ics:hover { background:#2a3a70; color:#a8c4ff; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FEATURE 4: SMART CLUSTERS (pre-computed)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .cl-precomputed-label { background:#1a9e6d; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:4px; margin-left:8px; }
+  .cl-refine-btn { background:#1a2a50; border:1px solid #2a3a70; color:#7aa0f0; padding:6px 14px; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer; margin-left:8px; transition:all .2s; }
+  .cl-refine-btn:hover { background:#2a3a70; color:#a8c4ff; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FEATURE 5: CHATBOT
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .chat-fab { position:fixed; bottom:24px; right:24px; width:56px; height:56px; border-radius:50%; background:var(--accent, #4f8ef7); color:#fff; border:none; font-size:24px; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,.4); z-index:9999; display:flex; align-items:center; justify-content:center; transition:transform .2s; }
+  .chat-fab:hover { transform:scale(1.1); }
+  .chat-panel { position:fixed; bottom:90px; right:24px; width:380px; max-height:520px; background:#0b1222; border:1px solid #1e2d4a; border-radius:16px; z-index:9998; display:none; flex-direction:column; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,.6); }
+  .chat-panel.open { display:flex; }
+  .chat-header { padding:14px 16px; background:#131f36; border-bottom:1px solid #1e2d4a; display:flex; align-items:center; justify-content:space-between; }
+  .chat-header-title { font-size:14px; font-weight:700; color:#e2e8f0; }
+  .chat-close { background:none; border:none; color:#64748b; font-size:18px; cursor:pointer; }
+  .chat-messages { flex:1; overflow-y:auto; padding:12px 16px; display:flex; flex-direction:column; gap:10px; min-height:300px; }
+  .chat-msg { max-width:85%; padding:10px 14px; border-radius:12px; font-size:13px; line-height:1.5; word-wrap:break-word; }
+  .chat-msg.user { align-self:flex-end; background:#1a2a50; color:#e2e8f0; border-bottom-right-radius:4px; }
+  .chat-msg.assistant { align-self:flex-start; background:#131f36; color:#cbd5e1; border-bottom-left-radius:4px; border:1px solid #1e2d4a; }
+  .chat-msg.typing { color:#64748b; font-style:italic; }
+  .chat-input-wrap { display:flex; padding:12px; border-top:1px solid #1e2d4a; gap:8px; }
+  .chat-input { flex:1; background:#131f36; border:1px solid #1e2d4a; border-radius:8px; padding:8px 12px; color:#e2e8f0; font-size:13px; outline:none; font-family:inherit; }
+  .chat-input:focus { border-color:#4f8ef7; }
+  .chat-send { background:var(--accent, #4f8ef7); border:none; color:#fff; border-radius:8px; padding:8px 14px; font-size:13px; font-weight:600; cursor:pointer; }
+  .chat-send:disabled { opacity:.5; cursor:not-allowed; }
+  .chat-api-setup { padding:16px; text-align:center; }
+  .chat-api-setup p { color:#94a3b8; font-size:13px; margin-bottom:12px; }
+  .chat-api-input { width:100%; background:#131f36; border:1px solid #1e2d4a; border-radius:8px; padding:8px 12px; color:#e2e8f0; font-size:12px; font-family:monospace; margin-bottom:8px; }
+  .chat-api-save { background:var(--accent, #4f8ef7); border:none; color:#fff; border-radius:6px; padding:6px 16px; font-size:12px; cursor:pointer; }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     FEATURE 6: RECOMENDACAO IA
+     ═══════════════════════════════════════════════════════════════════════════ */
+  .reco-btn { background:linear-gradient(135deg,#4f8ef7,#8B5CF6); color:#fff; border:none; padding:10px 20px; border-radius:8px; font-size:14px; font-weight:700; cursor:pointer; margin-top:16px; transition:transform .2s; }
+  .reco-btn:hover { transform:scale(1.05); }
+  .reco-overlay { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:10000; display:none; align-items:center; justify-content:center; }
+  .reco-overlay.open { display:flex; }
+  .reco-modal { background:#0b1222; border:1px solid #1e2d4a; border-radius:16px; width:90%; max-width:600px; max-height:85vh; overflow-y:auto; padding:24px; }
+  .reco-modal h2 { font-size:18px; font-weight:700; color:#e2e8f0; margin-bottom:16px; }
+  .reco-field { margin-bottom:14px; }
+  .reco-field label { display:block; font-size:12px; font-weight:600; color:#94a3b8; margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+  .reco-select { width:100%; background:#131f36; border:1px solid #1e2d4a; border-radius:8px; padding:8px 12px; color:#e2e8f0; font-size:13px; }
+  .reco-checks { display:flex; flex-wrap:wrap; gap:8px; }
+  .reco-check { display:flex; align-items:center; gap:4px; background:#131f36; border:1px solid #1e2d4a; border-radius:6px; padding:6px 10px; font-size:12px; color:#cbd5e1; cursor:pointer; transition:all .2s; }
+  .reco-check:has(input:checked) { border-color:#4f8ef7; background:#1a2a50; color:#7aa0f0; }
+  .reco-check input { display:none; }
+  .reco-submit { background:linear-gradient(135deg,#4f8ef7,#8B5CF6); color:#fff; border:none; padding:10px 24px; border-radius:8px; font-size:14px; font-weight:700; cursor:pointer; width:100%; margin-top:16px; }
+  .reco-submit:disabled { opacity:.5; cursor:not-allowed; }
+  .reco-result { margin-top:16px; padding:16px; background:#131f36; border:1px solid #1e2d4a; border-radius:12px; color:#cbd5e1; font-size:13px; line-height:1.7; white-space:pre-wrap; }
+  .reco-close { position:absolute; top:16px; right:16px; background:none; border:none; color:#64748b; font-size:20px; cursor:pointer; }
+  .reco-modal-wrap { position:relative; }
 </style>
 </head>
 <body>
@@ -2550,6 +2654,9 @@
     </button>
     <button class="tab-btn" onclick="switchTab('noticias', this)">
       📰 Notícias <span class="tab-badge">IA</span>
+    </button>
+    <button class="tab-btn" onclick="switchTab('comparador', this)">
+      ⚖️ Comparador <span class="tab-badge" id="compTabBadge">0</span>
     </button>
     <div class="tab-nav-spacer"></div>
     <div class="ics-export-wrap">
@@ -2611,13 +2718,15 @@
     <span class="sel-banner-icon">⭐</span>
     <span class="sel-banner-text" id="selBannerText">0 eventos selecionados</span>
     <span class="sel-banner-budget" id="selBannerBudget"></span>
+    <button class="sel-banner-ics" onclick="exportSelecaoIcs()">📅 Exportar Seleção</button>
     <button class="sel-banner-clear" onclick="clearSelecao()">✕ Limpar seleção</button>
   </div>
 </div>
 
 <div class="hero">
-  <h1 class="hero-title">69 Eventos Globais<br>para Startups em 2026</h1>
+  <h1 class="hero-title"><span id="heroEventCount">69</span> Eventos Globais<br>para Startups em 2026</h1>
   <p class="hero-sub">Guia completo com custos estimados de passagem, hospedagem, alimentação e inscrição — calculados a partir de Fortaleza, CE.</p>
+  <button class="reco-btn" onclick="openRecoModal()">🎯 Recomendação IA</button>
 
   <div class="stats-row">
     <div class="stat-chip">
@@ -2661,6 +2770,27 @@
     </div>
   </div>
   <div class="calendar-grid" id="calendarGrid"></div>
+</div>
+
+<!-- BUDGET SIMULATOR -->
+<div class="main">
+  <div class="budget-sim" id="budgetSim">
+    <div class="budget-sim-header">
+      <div class="budget-sim-title">💰 Simulador de Orçamento</div>
+      <div class="budget-sim-count" id="budgetCount">—</div>
+    </div>
+    <div class="budget-slider-wrap">
+      <label>R$ 10k</label>
+      <input type="range" class="budget-slider" id="budgetSlider" min="10000" max="300000" step="5000" value="300000" oninput="onBudgetChange(this.value)">
+      <label>R$ 300k</label>
+      <div class="budget-slider-val" id="budgetVal">R$ 300.000</div>
+    </div>
+    <div class="budget-actions">
+      <button class="budget-combo-btn" onclick="suggestBestCombo()">🏆 Melhor combo</button>
+      <button class="budget-combo-btn" onclick="resetBudget()">↩️ Resetar</button>
+    </div>
+    <div class="budget-combo-result" id="budgetComboResult"></div>
+  </div>
 </div>
 
 <!-- events -->
@@ -2831,6 +2961,18 @@
 
   </div>
 </div><!-- /tabNoticias -->
+
+<!-- TAB: COMPARADOR -->
+<div id="tabComparador" class="tab-panel">
+  <div id="comparadorContent">
+    <div class="comp-empty" id="compEmpty">
+      <div class="comp-empty-icon">⚖️</div>
+      <div class="comp-empty-title">Comparador Lado a Lado</div>
+      <div class="comp-empty-sub">Selecione 2 ou 3 eventos para comparar</div>
+    </div>
+    <div id="compGrid"></div>
+  </div>
+</div>
 
 <!-- NEWS BRIEFING MODAL -->
 <div id="newsModalOverlay" class="news-modal-overlay" onclick="closeNewsModal()"></div>
@@ -7211,6 +7353,771 @@ function generateReport() {
 
   closeExportPanel();
 }
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE: DYNAMIC COUNTS
+// ═══════════════════════════════════════════════════════════════════════════════
+(function updateDynamicCounts() {
+  const n = events.length;
+  // Hero title
+  const heroCount = document.getElementById('heroEventCount');
+  if (heroCount) heroCount.textContent = n;
+  // Tab badges "69" → dynamic
+  document.querySelectorAll('.tab-badge').forEach(b => {
+    if (b.textContent.trim() === '69') b.textContent = n;
+  });
+  // ICS panel desc
+  const icsDesc = document.querySelector('.ics-panel-desc');
+  if (icsDesc) icsDesc.innerHTML = icsDesc.innerHTML.replace(/\b69\b/, n);
+  // Mapa count
+  const mapaCount = document.getElementById('mapaCount');
+  if (mapaCount) mapaCount.textContent = mapaCount.textContent.replace('69', n);
+  // Export count
+  const exportCount = document.getElementById('exportCount');
+  if (exportCount) exportCount.textContent = exportCount.textContent.replace('69', n);
+  // CL_STEPS
+  if (typeof CL_STEPS !== 'undefined') CL_STEPS[0] = CL_STEPS[0].replace('69', n);
+  // Mapa pills "Todos (59)" → dynamic
+  document.querySelectorAll('.mapa-pill[data-filter="all"]').forEach(p => {
+    p.innerHTML = p.innerHTML.replace(/\(\d+\)/, `(${n})`);
+  });
+})();
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE 1: COMPARADOR LADO A LADO
+// ═══════════════════════════════════════════════════════════════════════════════
+function getEventMaxCost(ev) {
+  if (ev.totalBRL) {
+    const nums = ev.totalBRL.replace(/\./g, '').match(/\d+/g);
+    return nums ? +nums[nums.length - 1] : 0;
+  }
+  if (ev.total && ev.total.max) {
+    const nums = ev.total.max.replace(/\./g, '').match(/\d+/g);
+    return nums ? +nums[nums.length - 1] : 0;
+  }
+  return 0;
+}
+
+function getEventMinCost(ev) {
+  if (ev.totalBRL) {
+    const nums = ev.totalBRL.replace(/\./g, '').match(/\d+/g);
+    return nums ? +nums[0] : 0;
+  }
+  if (ev.total && ev.total.min) {
+    const nums = ev.total.min.replace(/\./g, '').match(/\d+/g);
+    return nums ? +nums[0] : 0;
+  }
+  return 0;
+}
+
+function getEventTotalLabel(ev) {
+  if (ev.totalBRL) return ev.totalBRL;
+  if (ev.total) return `${ev.total.min} – ${ev.total.max}`;
+  return '—';
+}
+
+function renderComparador() {
+  const selEvs = events.filter(e => selectedIds.has(e.id));
+  const empty = document.getElementById('compEmpty');
+  const grid = document.getElementById('compGrid');
+  const badge = document.getElementById('compTabBadge');
+
+  if (badge) badge.textContent = selectedIds.size;
+
+  if (selEvs.length < 2) {
+    empty.style.display = 'block';
+    grid.innerHTML = '';
+    return;
+  }
+
+  empty.style.display = 'none';
+  const evs = selEvs.slice(0, 3);
+
+  // Find cheapest/most expensive
+  const costs = evs.map(e => getEventMaxCost(e));
+  const minCost = Math.min(...costs);
+  const maxCost = Math.max(...costs);
+
+  const fields = [
+    { label: 'Data', fn: e => e.date },
+    { label: 'Local', fn: e => e.location },
+    { label: 'Foco', fn: e => e.focus },
+    { label: 'Inscrição', fn: e => e.inscription ? `${e.inscription.value} (${e.inscription.brl || ''})` : '—' },
+    { label: 'Passagem', fn: e => e.flight ? e.flight.value : '—' },
+    { label: 'Hospedagem', fn: e => e.hotel ? e.hotel.value : '—' },
+    { label: 'Alimentação', fn: e => e.food ? e.food.value : '—' },
+    { label: 'Custo Total', fn: e => getEventTotalLabel(e), cost: true },
+    { label: 'ROI', fn: e => '⭐'.repeat(e.roi || 0) + (e.roiDesc ? ` — ${e.roiDesc}` : ''), star: true },
+    { label: 'Dicas', fn: e => (e.tips || []).map(t => `${t.icon} ${t.text}`).join('<br>'), html: true },
+  ];
+
+  let html = `<div class="comp-grid cols-${evs.length}">`;
+  evs.forEach((ev, i) => {
+    const costClass = costs[i] === minCost && minCost !== maxCost ? 'cheapest' : costs[i] === maxCost && minCost !== maxCost ? 'priciest' : '';
+    html += `<div class="comp-col">
+      <div class="comp-col-header">
+        <div class="comp-col-flag">${ev.flag}</div>
+        <div class="comp-col-name">${ev.name}</div>
+        <div class="comp-col-loc">${ev.location}</div>
+      </div>`;
+    fields.forEach(f => {
+      const val = f.fn(ev);
+      const cls = f.cost ? costClass : '';
+      html += `<div class="comp-row">
+        <div class="comp-row-label">${f.label}</div>
+        <div class="comp-row-value ${cls} ${f.star ? 'comp-stars' : ''} ${f.html ? 'comp-tips' : ''}">${val}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+  html += `</div>`;
+  grid.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE 2: SIMULADOR DE ORCAMENTO
+// ═══════════════════════════════════════════════════════════════════════════════
+let budgetActive = false;
+let budgetValue = 300000;
+
+function onBudgetChange(val) {
+  budgetValue = parseInt(val);
+  budgetActive = true;
+  document.getElementById('budgetVal').textContent = `R$ ${budgetValue.toLocaleString('pt-BR')}`;
+  applyBudgetFilter();
+}
+
+function applyBudgetFilter() {
+  if (!budgetActive) return;
+  let count = 0;
+  document.querySelectorAll('.event-card').forEach(card => {
+    const id = parseInt(card.id.replace('event-card-', ''));
+    const ev = events.find(e => e.id === id);
+    if (!ev) return;
+    const max = getEventMaxCost(ev);
+    if (max > 0 && max > budgetValue) {
+      card.classList.add('budget-dimmed');
+    } else {
+      card.classList.remove('budget-dimmed');
+      if (!card.classList.contains('hidden')) count++;
+    }
+  });
+  document.getElementById('budgetCount').textContent = `${count} eventos cabem no orçamento de R$ ${budgetValue.toLocaleString('pt-BR')}`;
+}
+
+function resetBudget() {
+  budgetActive = false;
+  budgetValue = 300000;
+  document.getElementById('budgetSlider').value = 300000;
+  document.getElementById('budgetVal').textContent = 'R$ 300.000';
+  document.getElementById('budgetCount').textContent = '—';
+  document.getElementById('budgetComboResult').classList.remove('visible');
+  document.querySelectorAll('.event-card').forEach(card => card.classList.remove('budget-dimmed'));
+}
+
+function suggestBestCombo() {
+  const budget = budgetValue;
+  // Sort events by ROI desc, then by cost asc
+  const sorted = [...events]
+    .map(e => ({ ev: e, max: getEventMaxCost(e), min: getEventMinCost(e), roi: e.roi || 0 }))
+    .filter(e => e.min > 0)
+    .sort((a, b) => b.roi - a.roi || a.min - b.min);
+
+  let remaining = budget;
+  const combo = [];
+  for (const item of sorted) {
+    if (item.min <= remaining) {
+      combo.push(item);
+      remaining -= item.min;
+    }
+  }
+
+  const totalMin = combo.reduce((s, c) => s + c.min, 0);
+  const totalMax = combo.reduce((s, c) => s + c.max, 0);
+  const result = document.getElementById('budgetComboResult');
+
+  if (combo.length === 0) {
+    result.innerHTML = 'Nenhum evento cabe nesse orçamento.';
+    result.classList.add('visible');
+    return;
+  }
+
+  let html = `<strong>🏆 Melhor combo: ${combo.length} eventos</strong> (custo estimado: R$ ${totalMin.toLocaleString('pt-BR')} – R$ ${totalMax.toLocaleString('pt-BR')})<br><br>`;
+  combo.forEach(c => {
+    html += `${'⭐'.repeat(c.roi)} <strong>${c.ev.flag} ${c.ev.name}</strong> — ${c.ev.date} — ${getEventTotalLabel(c.ev)}<br>`;
+  });
+  result.innerHTML = html;
+  result.classList.add('visible');
+}
+
+// Hook into applyFilters to re-apply budget filter
+const _origApplyFilters = applyFilters;
+applyFilters = function() {
+  _origApplyFilters();
+  if (budgetActive) applyBudgetFilter();
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE 3: EXPORTAR ICS DA SELECAO
+// ═══════════════════════════════════════════════════════════════════════════════
+function exportSelecaoIcs() {
+  const selEvs = events.filter(e => selectedIds.has(e.id));
+  if (selEvs.length === 0) {
+    alert('Nenhum evento selecionado.');
+    return;
+  }
+
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//7BIS Startup Studio//Eventos Startups 2026//PT',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'X-WR-CALNAME:⭐ Minha Seleção — Eventos 2026',
+    `X-WR-CALDESC:${selEvs.length} eventos selecionados — 7BIS Startup Studio`,
+    'X-WR-TIMEZONE:America/Fortaleza',
+    ...selEvs.map(buildIcsEvent),
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  const blob = new Blob([lines], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `minha-selecao-${selEvs.length}eventos.ics`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE 4: SMART CLUSTERS (PRE-COMPUTED)
+// ═══════════════════════════════════════════════════════════════════════════════
+const SMART_REGIONS = {
+  brasil: { coords: [-15, -47], countries: ['bra', 'br'] },
+  europa_oeste: { coords: [48, 2], countries: ['eur'] },
+  europa_norte: { coords: [60, 25], countries: ['eur'] },
+  europa_central: { coords: [52, 13], countries: ['eur'] },
+  eua_oeste: { coords: [37, -122], countries: ['nam'] },
+  eua_leste: { coords: [40, -74], countries: ['nam'] },
+  eua_sul: { coords: [25, -80], countries: ['nam'] },
+  asia: { coords: [1, 103], countries: ['asia'] },
+  mena: { coords: [24, 54], countries: ['mena'] }
+};
+
+const SMART_GEO_COORDS = typeof CL_COORDS !== 'undefined' ? CL_COORDS : (function() {
+  // Use the existing coordinates from clAnalyzeWithClaude
+  return {
+    1:[58.378,26.728],2:[-22.9519,-43.2105],3:[60.1699,24.9384],4:[51.5074,-0.1278],5:[37.5665,126.978],
+    6:[48.2082,16.3738],7:[51.0504,13.7373],8:[44.4268,26.1025],9:[41.3851,2.1734],10:[37.7749,-122.4194],
+    11:[38.7169,-9.1399],12:[60.1699,24.9384],13:[48.8566,2.3522],14:[40.4168,-3.7038],15:[48.1351,11.582],
+    16:[35.8997,14.5147],17:[47.4245,9.3767],18:[25.2854,51.531],19:[52.3676,4.9041],20:[25.2048,55.2708],
+    21:[30.2672,-97.7431],22:[49.2827,-123.1207],23:[43.6532,-79.3832],24:[32.0853,34.7818],25:[12.9716,77.5946],
+    26:[-23.5505,-46.6333],27:[-23.5505,-46.6333],28:[48.8566,2.3522],29:[35.6762,139.6503],30:[52.3676,4.9041],
+    31:[-30.0346,-51.2177],32:[-29.3783,-50.8753],33:[-23.5505,-46.6333],34:[-19.9191,-43.9386],35:[-22.9519,-43.2105],
+    36:[-23.5505,-46.6333],37:[-23.5505,-46.6333],38:[-27.5954,-48.548],39:[37.3387,-121.8853],40:[25.7907,-80.13],
+    41:[37.4853,-122.2364],42:[37.7749,-122.4194],43:[36.1699,-115.1398],44:[33.7701,-118.1937],45:[37.7749,-122.4194],
+    46:[36.1699,-115.1398],47:[38.9072,-77.0369],48:[40.7128,-74.006],49:[25.6866,-100.3161],50:[20.6597,-103.3496],
+    51:[4.711,-74.0721],52:[-33.4489,-70.6693],53:[-34.6037,-58.3816],54:[40.7128,-74.006],55:[4.711,-74.0721],
+    56:[19.4326,-99.1332],57:[-23.5505,-46.6333],58:[-12.0464,-77.0428]
+  };
+})();
+
+function getEventRegion(ev) {
+  const coords = SMART_GEO_COORDS[ev.id];
+  if (!coords) {
+    // Fallback by country code
+    if (['bra', 'br'].includes(ev.country)) return 'brasil';
+    if (ev.country === 'eur') return 'europa_oeste';
+    if (ev.country === 'nam') return 'eua_oeste';
+    if (ev.country === 'latam') return 'brasil';
+    if (ev.country === 'mena') return 'mena';
+    if (ev.country === 'asia') return 'asia';
+    return 'europa_oeste';
+  }
+  const [lat, lon] = coords;
+  // Simple region detection by coordinates
+  if (lat < 0 && lon > -60 && lon < -30) return 'brasil';
+  if (lat > 40 && lat < 55 && lon > -10 && lon < 5) return 'europa_oeste';
+  if (lat >= 55 && lon > 10 && lon < 35) return 'europa_norte';
+  if (lat > 40 && lat < 55 && lon >= 5 && lon < 25) return 'europa_central';
+  if (lat > 30 && lat < 50 && lon < -100) return 'eua_oeste';
+  if (lat > 30 && lat < 50 && lon >= -100 && lon < -60) return 'eua_leste';
+  if (lat >= 20 && lat <= 30 && lon < -60) return 'eua_sul';
+  if (lat < 30 && lon > 90) return 'asia';
+  if (lat > 15 && lat < 40 && lon > 30 && lon < 60) return 'mena';
+  // LATAM
+  if (lat < 15 && lat > -40 && lon > -90 && lon < -30) return 'brasil';
+  return 'europa_oeste';
+}
+
+function computeSmartClusters(windowDays = 21) {
+  // Group events by region
+  const byRegion = {};
+  events.forEach(ev => {
+    const region = getEventRegion(ev);
+    if (!byRegion[region]) byRegion[region] = [];
+    byRegion[region].push(ev);
+  });
+
+  const clusters = [];
+  let clId = 1;
+  const regionNames = {
+    brasil: 'Brasil', europa_oeste: 'Europa Ocidental', europa_norte: 'Europa do Norte',
+    europa_central: 'Europa Central', eua_oeste: 'Costa Oeste EUA', eua_leste: 'Costa Leste EUA',
+    eua_sul: 'Sul dos EUA', asia: 'Asia', mena: 'MENA'
+  };
+  // Map detailed regions to cluster-system region codes
+  const regionToCluster = {
+    brasil: 'brasil', europa_oeste: 'europa', europa_norte: 'europa',
+    europa_central: 'europa', eua_oeste: 'eua', eua_leste: 'eua',
+    eua_sul: 'eua', asia: 'asia', mena: 'oriente_medio'
+  };
+
+  for (const [region, evs] of Object.entries(byRegion)) {
+    // Sort by month
+    const sorted = [...evs].sort((a, b) => a.month - b.month);
+    let i = 0;
+    while (i < sorted.length) {
+      const group = [sorted[i]];
+      let j = i + 1;
+      while (j < sorted.length) {
+        // Check temporal proximity: within windowDays
+        const dayDiff = Math.abs((sorted[j].month - sorted[i].month) * 30);
+        if (dayDiff <= windowDays) {
+          group.push(sorted[j]);
+          j++;
+        } else {
+          break;
+        }
+      }
+      if (group.length >= 2) {
+        const months = [...new Set(group.map(e => e.month))].sort((a, b) => a - b);
+        const monthNames = ['', 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+        const dateRange = months.length === 1 ? monthNames[months[0]] : `${monthNames[months[0]]}–${monthNames[months[months.length - 1]]}`;
+        clusters.push({
+          id: `SC${clId}`,
+          name: `${regionNames[region] || region} · ${dateRange}`,
+          region: regionToCluster[region] || region,
+          events: group.map(e => e.id),
+          dateRange: dateRange,
+          windowUsed: windowDays,
+          insight: `${group.length} eventos na mesma regiao dentro de ${windowDays} dias — economia de passagem e hospedagem`,
+          saving: group.length >= 3 ? 'alto' : 'medio',
+          savingEstimate: `~R$ ${(group.length * 5000).toLocaleString('pt-BR')} economia potencial`
+        });
+        clId++;
+      }
+      i = j > i + 1 ? j : i + 1;
+    }
+  }
+
+  return clusters.sort((a, b) => b.events.length - a.events.length);
+}
+
+// Override switchTab to show smart clusters immediately
+const _origSwitchTab = switchTab;
+switchTab = function(tab, btn) {
+  // Extend panelId mapping
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  const panelId = tab === 'guide' ? 'tabGuide' : tab === 'mapa' ? 'tabMapa' : tab === 'clusters' ? 'tabClusters' : tab === 'comparador' ? 'tabComparador' : 'tabNoticias';
+  document.getElementById(panelId).classList.add('active');
+
+  if (tab === 'clusters') {
+    document.getElementById('clusterPanel').classList.add('active');
+    if (!clMap) initClusterMap();
+    // Show pre-computed smart clusters if no AI clusters yet
+    if (clClusters.length === 0) {
+      const raw = computeSmartClusters(parseInt(document.getElementById('clWindowSelect').value));
+      if (raw.length > 0) {
+        // Add color and eventData to match AI cluster format
+        const smart = raw.map((c, i) => ({
+          ...c,
+          color: CL_COLORS[i % CL_COLORS.length],
+          eventData: (c.events || []).map(eid => {
+            const ev = events.find(e => e.id === eid);
+            if (!ev) return null;
+            const coords = SMART_GEO_COORDS[eid] || [0, 0];
+            return { ...ev, lat: coords[0], lng: coords[1] };
+          }).filter(Boolean)
+        }));
+        clClusters = smart;
+        clRenderSidebar(smart);
+        clRenderMap(smart);
+        clRenderPills(smart);
+        clUpdateStats(smart);
+        document.getElementById('clusterTabBadge').textContent = smart.length;
+      }
+    }
+  } else {
+    document.getElementById('clusterPanel').classList.remove('active');
+  }
+
+  if (tab === 'mapa') {
+    if (!evMap) initEventMap();
+    else setTimeout(() => evMap.invalidateSize(), 50);
+  }
+
+  if (tab === 'noticias') {
+    initNewsTab();
+  }
+
+  if (tab === 'comparador') {
+    renderComparador();
+  }
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE 5: CHATBOT DE EVENTOS COM IA
+// ═══════════════════════════════════════════════════════════════════════════════
+(function initChatbot() {
+  // Create FAB
+  const fab = document.createElement('button');
+  fab.className = 'chat-fab';
+  fab.innerHTML = '💬';
+  fab.onclick = toggleChatPanel;
+  document.body.appendChild(fab);
+
+  // Create panel
+  const panel = document.createElement('div');
+  panel.className = 'chat-panel';
+  panel.id = 'chatPanel';
+  panel.innerHTML = `
+    <div class="chat-header">
+      <div class="chat-header-title">💬 Assistente de Eventos</div>
+      <button class="chat-close" onclick="toggleChatPanel()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input-wrap">
+      <input class="chat-input" id="chatInput" placeholder="Pergunte sobre eventos..." onkeydown="if(event.key==='Enter')sendChatMsg()">
+      <button class="chat-send" id="chatSendBtn" onclick="sendChatMsg()">Enviar</button>
+    </div>
+  `;
+  document.body.appendChild(panel);
+
+  // Load chat history
+  loadChatHistory();
+})();
+
+let chatHistory = [];
+const CHAT_HISTORY_KEY = '7bis_chat_history';
+
+function loadChatHistory() {
+  try {
+    chatHistory = JSON.parse(localStorage.getItem(CHAT_HISTORY_KEY) || '[]');
+  } catch(e) { chatHistory = []; }
+  renderChatMessages();
+}
+
+function saveChatHistory() {
+  localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(chatHistory.slice(-50)));
+}
+
+function renderChatMessages() {
+  const container = document.getElementById('chatMessages');
+  if (!container) return;
+  if (chatHistory.length === 0) {
+    container.innerHTML = '<div class="chat-msg assistant">Ola! Sou o assistente de eventos. Pergunte sobre eventos, custos, datas ou peca recomendacoes. Exemplos:<br><br>• Quais eventos de IA na Europa?<br>• Eventos com custo abaixo de R$15k?<br>• Melhores eventos para fintech</div>';
+    return;
+  }
+  container.innerHTML = chatHistory.map(m =>
+    `<div class="chat-msg ${m.role}">${m.content.replace(/\n/g, '<br>')}</div>`
+  ).join('');
+  container.scrollTop = container.scrollHeight;
+}
+
+function toggleChatPanel() {
+  const panel = document.getElementById('chatPanel');
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open')) {
+    // Check API key
+    const key = localStorage.getItem('claude_api_key');
+    if (!key) {
+      showApiKeySetup('chatMessages');
+    }
+    setTimeout(() => {
+      const input = document.getElementById('chatInput');
+      if (input) input.focus();
+      const msgs = document.getElementById('chatMessages');
+      if (msgs) msgs.scrollTop = msgs.scrollHeight;
+    }, 100);
+  }
+}
+
+function showApiKeySetup(containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = `
+    <div class="chat-api-setup">
+      <p>Configure sua chave da API Anthropic para usar o assistente de IA.</p>
+      <input class="chat-api-input" id="apiKeyInput" type="password" placeholder="sk-ant-...">
+      <br>
+      <button class="chat-api-save" onclick="saveApiKey()">Salvar chave</button>
+    </div>
+  `;
+}
+
+function saveApiKey() {
+  const input = document.getElementById('apiKeyInput');
+  if (!input || !input.value.trim()) return;
+  localStorage.setItem('claude_api_key', input.value.trim());
+  renderChatMessages();
+}
+
+function getClaudeApiKey() {
+  return localStorage.getItem('claude_api_key') || '';
+}
+
+async function sendChatMsg() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) {
+    showApiKeySetup('chatMessages');
+    return;
+  }
+
+  input.value = '';
+  chatHistory.push({ role: 'user', content: msg });
+  renderChatMessages();
+
+  // Show typing indicator
+  const container = document.getElementById('chatMessages');
+  const typing = document.createElement('div');
+  typing.className = 'chat-msg assistant typing';
+  typing.textContent = 'Pensando...';
+  container.appendChild(typing);
+  container.scrollTop = container.scrollHeight;
+
+  const btn = document.getElementById('chatSendBtn');
+  btn.disabled = true;
+
+  try {
+    // Build event summary for context
+    const eventsSummary = events.map(e =>
+      `ID:${e.id} ${e.flag} ${e.name} | ${e.date} | ${e.location} | ${e.country} | P:${e.priority} | Foco: ${e.focus} | Custo: ${getEventTotalLabel(e)} | ROI: ${'*'.repeat(e.roi||0)}`
+    ).join('\n');
+
+    const systemPrompt = `Voce e um assistente especialista em eventos de startups e tecnologia para 2026. Responda SEMPRE em portugues.
+Voce tem acesso a lista completa de ${events.length} eventos:
+
+${eventsSummary}
+
+Regras:
+- Responda com base nos dados dos eventos acima
+- Recomende eventos com base nos criterios do usuario
+- Inclua custos, datas e locais nas respostas
+- Seja conciso mas informativo
+- Use formatacao simples (sem markdown pesado)`;
+
+    const messages = chatHistory.map(m => ({
+      role: m.role === 'user' ? 'user' : 'assistant',
+      content: m.content
+    }));
+
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: messages
+      })
+    });
+
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(data.error?.message || 'Erro na API');
+
+    const reply = data.content.find(b => b.type === 'text')?.text || 'Sem resposta.';
+    chatHistory.push({ role: 'assistant', content: reply });
+  } catch (err) {
+    chatHistory.push({ role: 'assistant', content: `Erro: ${err.message}` });
+  }
+
+  btn.disabled = false;
+  saveChatHistory();
+  renderChatMessages();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FEATURE 6: RECOMENDACAO PERSONALIZADA COM IA
+// ═══════════════════════════════════════════════════════════════════════════════
+(function initRecoModal() {
+  const overlay = document.createElement('div');
+  overlay.className = 'reco-overlay';
+  overlay.id = 'recoOverlay';
+  overlay.onclick = function(e) { if (e.target === overlay) closeRecoModal(); };
+  overlay.innerHTML = `
+    <div class="reco-modal-wrap">
+      <div class="reco-modal" id="recoModal">
+        <button class="reco-close" onclick="closeRecoModal()">✕</button>
+        <h2>🎯 Recomendação Personalizada com IA</h2>
+
+        <div class="reco-field">
+          <label>Setor</label>
+          <select class="reco-select" id="recoSetor">
+            <option value="SaaS">SaaS</option>
+            <option value="Fintech">Fintech</option>
+            <option value="Hardware/Robotica">Hardware/Robotica</option>
+            <option value="IA/ML">IA/ML</option>
+            <option value="Web3/Crypto">Web3/Crypto</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Deep Tech">Deep Tech</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="reco-field">
+          <label>Orcamento Anual</label>
+          <div class="budget-slider-wrap">
+            <label>R$ 10k</label>
+            <input type="range" class="budget-slider" id="recoOrcamento" min="10000" max="300000" step="5000" value="50000" oninput="document.getElementById('recoOrcVal').textContent='R$ '+parseInt(this.value).toLocaleString('pt-BR')">
+            <label>R$ 300k</label>
+            <div class="budget-slider-val" id="recoOrcVal">R$ 50.000</div>
+          </div>
+        </div>
+
+        <div class="reco-field">
+          <label>Objetivos</label>
+          <div class="reco-checks">
+            <label class="reco-check"><input type="checkbox" value="Networking/VC" checked> Networking/VC</label>
+            <label class="reco-check"><input type="checkbox" value="Lancar produto"> Lancar produto</label>
+            <label class="reco-check"><input type="checkbox" value="Aprender"> Aprender</label>
+            <label class="reco-check"><input type="checkbox" value="Expandir mercado"> Expandir mercado</label>
+            <label class="reco-check"><input type="checkbox" value="Recrutar"> Recrutar</label>
+          </div>
+        </div>
+
+        <div class="reco-field">
+          <label>Regioes de Interesse</label>
+          <div class="reco-checks">
+            <label class="reco-check"><input type="checkbox" value="Brasil" checked> Brasil</label>
+            <label class="reco-check"><input type="checkbox" value="Europa"> Europa</label>
+            <label class="reco-check"><input type="checkbox" value="EUA"> EUA</label>
+            <label class="reco-check"><input type="checkbox" value="Asia"> Asia</label>
+            <label class="reco-check"><input type="checkbox" value="LATAM"> LATAM</label>
+            <label class="reco-check"><input type="checkbox" value="MENA"> MENA</label>
+          </div>
+        </div>
+
+        <button class="reco-submit" id="recoSubmitBtn" onclick="submitReco()">🚀 Gerar Recomendacao</button>
+        <div class="reco-result" id="recoResult" style="display:none"></div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+})();
+
+function openRecoModal() {
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) {
+    // Show a quick API key prompt
+    const key = prompt('Insira sua chave da API Anthropic (sk-ant-...) para usar recursos de IA:');
+    if (key && key.trim()) {
+      localStorage.setItem('claude_api_key', key.trim());
+    } else {
+      return;
+    }
+  }
+  document.getElementById('recoOverlay').classList.add('open');
+}
+
+function closeRecoModal() {
+  document.getElementById('recoOverlay').classList.remove('open');
+}
+
+async function submitReco() {
+  const apiKey = getClaudeApiKey();
+  if (!apiKey) { openRecoModal(); return; }
+
+  const setor = document.getElementById('recoSetor').value;
+  const orcamento = document.getElementById('recoOrcamento').value;
+  const objetivos = Array.from(document.querySelectorAll('#recoModal .reco-field:nth-child(3) input:checked')).map(i => i.value);
+  const regioes = Array.from(document.querySelectorAll('#recoModal .reco-field:nth-child(4) input:checked')).map(i => i.value);
+
+  const btn = document.getElementById('recoSubmitBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Analisando...';
+
+  const result = document.getElementById('recoResult');
+  result.style.display = 'block';
+  result.textContent = 'Gerando recomendacao personalizada...';
+
+  const eventsSummary = events.map(e =>
+    `ID:${e.id} ${e.flag} ${e.name} | ${e.date} | ${e.location} | ${e.country} | P:${e.priority} | Foco: ${e.focus} | Custo: ${getEventTotalLabel(e)} | ROI: ${'*'.repeat(e.roi||0)}`
+  ).join('\n');
+
+  const prompt = `Voce e um consultor de eventos para startups. Analise estes ${events.length} eventos e faca uma recomendacao personalizada.
+
+PERFIL DO USUARIO:
+- Setor: ${setor}
+- Orcamento anual para eventos: R$ ${parseInt(orcamento).toLocaleString('pt-BR')}
+- Objetivos: ${objetivos.join(', ') || 'Nao especificado'}
+- Regioes de interesse: ${regioes.join(', ') || 'Todas'}
+
+EVENTOS DISPONIVEIS:
+${eventsSummary}
+
+INSTRUCOES:
+1. Recomende os 5-8 melhores eventos para este perfil
+2. Justifique cada escolha em 1 linha
+3. Sugira clusters de viagem (eventos proximos em data/local para economizar)
+4. Calcule o orcamento total estimado
+5. Responda em portugues
+6. Formato limpo e organizado, sem markdown pesado`;
+
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 2000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(data.error?.message || 'Erro na API');
+
+    const reply = data.content.find(b => b.type === 'text')?.text || 'Sem resposta.';
+    result.textContent = reply;
+  } catch (err) {
+    result.textContent = `Erro: ${err.message}`;
+  }
+
+  btn.disabled = false;
+  btn.textContent = '🚀 Gerar Recomendacao';
+}
+
+// Update comparador badge when selection changes
+const _origUpdateSelBanner = updateSelBanner;
+updateSelBanner = function() {
+  _origUpdateSelBanner();
+  const badge = document.getElementById('compTabBadge');
+  if (badge) badge.textContent = selectedIds.size;
+  // If comparador tab is active, re-render
+  const compPanel = document.getElementById('tabComparador');
+  if (compPanel && compPanel.classList.contains('active')) {
+    renderComparador();
+  }
+};
+// Re-trigger to set initial badge
+updateSelBanner();
+
 </script>
 </body>
 </html>
